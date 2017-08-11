@@ -16,6 +16,7 @@ env:
   - TARGET=node6
   - TARGET=android
   - TARGET=sonar-scan
+  - TARGET=json
 
 matrix:
   exclude:
@@ -25,6 +26,8 @@ matrix:
       env: TARGET=android
     - compiler: clang
       env: TARGET=sonar-scan
+    - compiler: clang
+      env: TARGET=json
   include:
     - compiler: gcc
       env: GCC_VERSION=6 TARGET=doc
@@ -41,6 +44,8 @@ matrix:
   allow_failures:
     - compiler: gcc
       env: TARGET=sonar-scan
+    - compiler: gcc
+      env: TARGET=json
 
 services:
   - docker

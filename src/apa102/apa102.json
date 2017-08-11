@@ -1,5 +1,5 @@
 {
-    "Library": "apa102",
+    "Library": "apa102",,,
     "Description": "Adafruit apa102 iPixel LED library",
     "Sensor Class": {
         "APA102": {

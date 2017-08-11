@@ -1,0 +1,11 @@
+FROM upm-base
+
+# Update apt-get
+RUN apt-get -y update && \
+    apt-get -y --no-install-recommends install jq
+
+# Set Workdir
+WORKDIR $UPM_SRC_DIR
+
+CMD bash
+

@@ -112,3 +112,10 @@ services:
     build:
       args:
         - NODE_VERSION=v6.11.0
+
+  json:
+    extends: base
+    image: upm-json
+    build:
+      dockerfile: docker/Dockerfile.json
+    command: bash -c "./scripts/run-jq.sh && ctest --output-on-failure"
